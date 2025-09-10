@@ -22,8 +22,10 @@ Route::middleware([
     })->name('dashboard');
 });
 
+Route::resource('students', StudentsController::class);
+
 Route::get('/departments', [DepartmentsController::class, 'index']);
 Route::get('/faculty', [FacultyController::class, 'index']);
-Route::get('/students', [StudentsController::class, 'index']);
+//Route::get('/students', [StudentsController::class, 'index']);
 Route::get('/subjects', [SubjectsController::class, 'index']);
 Route::get('/grades', [GradesController::class, 'index']);
